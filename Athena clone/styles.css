@@ -1,0 +1,161 @@
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    
+    body {
+      background: rgba(201, 203, 214, 0.3);
+    }
+    
+    header {
+      background: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      box-shadow: 13px 2px rgba(127, 198, 230, 0.2);
+    }
+    
+    #logo {
+      color: #ED1279;
+    }
+    
+    i {
+      font-size: 21px;
+    }
+    
+    h1 {
+      text-align: center;
+      padding: 10px;
+    }
+    
+    span {
+      color: #ED1279;
+    }
+    
+    #pep {
+      padding: 5px 10px;
+      line-height: 22px;
+    }
+    
+    #typeHolder {
+      display: flex;
+      width: 70vw;
+      margin: auto;
+      justify-content: center;
+    }
+    
+    .type {
+      border: 0.5px solid black;
+      display: flex;
+      padding: 10px 10px;
+      justify-self: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    
+    .one {
+      border-right:0.1px solid #000;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    
+    .two {
+      border-left:0.1px solid #000;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    
+    #d1:hover {
+      background: pink;
+    }
+    
+    #others {
+      text-align: center;
+    }
+    
+    #g {
+      width: 100%;
+      Background-color: rgba(191, 192, 196, 0.5);
+      margin: 10px auto 0px auto;
+      display: grid;
+      padding: 5px 20px 20px 20px;
+    }
+    
+    p {
+      color: #ED1279;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    
+    #g div img {
+      transform: scale(1.5, 1.5);
+      margin: auto;
+    }
+    
+    #gle {
+      padding: 10px;
+      background-color: rgba(233, 234, 239, 1);
+      border-radius: 5px;
+      margin: auto;
+      width: 45px;
+      box-shadow: 1px 1px 20px 2px rgba(71, 75, 125, 1);
+    }
+    
+    form {
+      display: grid;
+      padding: 20px 20px;
+      grid-template-rows: auto auto auto auto auto auto auto auto;
+      row-gap: 20px;
+    }
+    
+    input {
+      outline: none;
+      font-size: 23px;
+      padding: 5px 8px;
+    }
+    
+    #email {
+      height: 40px;
+      border-radius: 8px;
+      border: 1px solid black;
+    }
+    
+    #psee {
+      border: 1px solid #000;
+      background-color: #fff;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 5px;
+      align-items: center;
+    }
+    
+    #pswd {
+      border: none;
+      border-radius: 8px;
+      align-items: center;
+      
+    }
+    
+    img {
+      width: 25px;
+      height: 25px;
+    }
+    
+    a {
+      color: #ED1279;
+      text-decoration: none;
+    }
+    
+    #submit {
+      background-color: #ED1279;
+      border-radius: 8px;
+      border: none;
+    }
+    
+    #sgn {
+      text-align: center;
+      color: #000;
+    }

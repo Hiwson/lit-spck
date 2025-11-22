@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>login</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      margin: auto;
+      background:linear-gradient(150deg,rgba(27, 132, 192, 0.3),rgba(112, 72, 147, 0.4));
+      padding:30px;
+      width:25rem;
+      display:grid;
+      row-gap:20px ;
+      border-radius:10px;
+    }
+    .holder{
+      display: flex;
+      justify-content:space-between;
+      /*border: 1px solid red;*/
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 3px;
+      background: #fff;
+      border-radius: 8px;
+    }
+    .rem-holder{
+      background: none;
+    }
+    label{
+      padding-bottom:10px;
+    }
+    input{
+      font-size:23px ;
+      outline: none;
+      padding-left:5px;
+      border: none;
+    }
+    a{color: red; font-weight:400;}
+    button{
+      font-size:25px ;
+      border-radius:10px;
+      padding: 5px;
+      border: 0.4px solid #000;
+      transition: box-shadow 1s,background 1srgba(160, 125, 206, 1);
+    }
+    button:hover{
+      box-shadow:1px 3px 10px rgba(160, 125, 206, 1);
+      background :rgba(27, 132, 192, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    
+    <h1>Welcome back</h1>
+    <p>Please enter your details</p>
+    
+    <div id="main">
+      <label for="email">Email:</label>
+      <div class="holder">
+        <input type="email" name="" id="email" placeholder="user@gmail.com">
+        <i class="exc">&#10071</i>
+      </div>
+      <label for="pswd">Password:</label>
+      <div class="holder">
+        <input type="password" name="" id="pswd" placeholder="****" />
+        <i class="exc">&#10071</i>
+        <i id="see">&#128274</i>
+      </div>
+    </div>
+    
+    <div class="holder rem-holder">
+      <div>
+        <input type="checkbox" name="" id="">
+        <label for="rem">Remember me</label>
+      </div>
+      <a href="">Forgot password?</a>
+    </div>
+    
+    <button type="submit" id="sub">Sign in</button>
+  </div>
+  <script>
+    let exc = document.querySelectorAll('.exc');
+    exc[0].style.display = 'none';
+    exc[1].style.display = 'none';
+    
+    let email = document.getElementById('email');
+    let pswd = document.getElementById('pswd');
+    let see = document.getElementById('see');
+
+    see.onclick = () => {
+      if(pswd.type = 'password'){
+        pswd.type = 'text';
+      }
+      else{
+        pswd.type = 'password';
+      }
+    }
+   let btn = document.getElementById('sub');
+   btn.onclick = () => {
+     if(email.textContent == 'user'){
+       exc[0].style.display = 'block';
+     }
+   }
+  </script>
+</body>
+
+</html>

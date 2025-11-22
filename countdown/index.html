@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background:#000 ;
+    }
+    #container {
+      background:  rgba(66, 68, 90, 1);
+      color: #fff;
+      display: block;
+      justify-items: center;
+      padding: 20px;
+      justify-self: center;
+      margin-top: 20vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <p>COMING SOON</p>
+    <p>in</p>
+    <p><span id="val">00</span> days</p>
+  </div>
+  
+  <script type="text/javascript" charset="utf-8">
+    let now = new Date();
+    let then = new Date("2025-10-2");
+    
+    const currentDay = now.getDate();
+    const finallDay = then.getDate();
+    
+    const diff = 30 - currentDay;
+    const countDown = diff + finallDay;
+    
+    document.getElementById('val').innerText = countDown;
+    
+    console.log(finallDay);
+    console.log(then.toUTCString());
+  </script>
+</body>
+
+</html>

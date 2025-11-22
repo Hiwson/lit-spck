@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>simple calculator</title>
+  <style type="text/css" media="all">
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: hsla(235, 0%, 69%, 1);
+    }
+    
+    #display {
+      display: grid;
+      width: 85%;
+      justify-self: center;
+      height: 110px;
+      margin-top: 20px;
+      border: 2px solid black;
+      border-radius: 15px;
+      padding: 10px;
+      background: #D2D3E1;
+    }
+    
+    .dis {
+      font-size: 36px;
+      text-align: right;
+      width: 100%;
+      padding-right: 15px;
+      outline: none;
+      border: none;
+    }
+    #btn-holder{
+      width: 85%;
+      justify-self: center;
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns:auto auto auto auto;
+      justify-content:space-between;
+      gap: 10px 5px;
+    }
+    .btn{
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+      font-size: 30px;
+      border: none;
+     box-shadow: 1px 1px 3px 7px  rgba(135, 241, 208, 0.2);
+     color: #fff;
+     background: rgba(65, 66, 71, 1);
+    }
+    .btn-clr{
+      background: rgba(254, 22, 22, 0.8);
+    }
+    .btn-sym{
+      background: rgba(220, 138, 43, 1);
+    }
+    .btn-ans{
+      background: rgba(134, 204, 51, 1);
+      color: #000;
+      font-size: 40px;
+    }
+    .btn-dot{
+      font-size: 60px;
+      text-align: center;
+      padding-bottom:20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="display">
+      <input name="" class="dis dis-in">
+      <input name="" class="dis dis-out">
+    </div>
+    
+    <div id="btn-holder">
+      <button class="btn btn-clr">C</button>
+      <button class="btn btn-del">D</button>
+      <button class="btn ">%</button>
+      <button class="btn btn-sym">+</button>
+      <button class="btn">9</button>
+      <button class="btn">8</button>
+      <button class="btn">7</button>
+      <button class="btn btn-sym">-</button>
+      <button class="btn">6</button>
+      <button class="btn">5</button>
+      <button class="btn">4</button>
+      <button class="btn btn-sym">/</button>
+      <button class="btn">3</button>
+      <button class="btn">2</button>
+      <button class="btn">1</button>
+      <button class="btn btn-sym">×</button>
+      <button class="btn">0</button>
+      <button class="btn btn-dot">.</button>
+      <button class="btn">()</button>
+      <button class="btn btn-ans">=</button>
+    </div>
+  </div>
+  
+  
+  <script>
+    let btn = document.querySelectorAll('.btn');
+    const display = document.querySelectorAll('.dis')
+    for(let i = 0; i<=20; i ++){
+    display[0].textContent = btn[i].textContent;
+    }
+  </script>
+  
+</body>
+
+</html>

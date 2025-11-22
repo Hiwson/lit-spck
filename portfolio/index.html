@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>myportfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/31326d426c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav>
+    <i class="fa-solid fa-bars" id="bars" onclick="display()"></i>
+    <ul id="navigators">
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Skills</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <div id="topContainer">
+    <div id="imgHolder">
+      <!--<div id="bg"></div>-->
+      <img src="/portfolio/1000122613-removebg-preview.png" alt="" />
+    </div>
+    
+    <div id="intro">
+      <p>Hello I am <span>Hiwson Njagi,</span><br>
+       <span id="">A Front-End developer</span>,<br>
+       My goal is to create static outstanding websites that have a good and smooth user experience using technologies like HTML5, CSS, JavaScript together with their frameworks
+      </p>
+      <div id="btn-holder">
+        <button>Collaborate</button>
+        <button>Download CV</button>
+        <button>Contact</button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="botContainer">
+    <div class="card about">
+      <h3>About Me</h3>
+      <img src="" alt="">
+      <p>I am a front-end developer based in Nakuru,Kenya who builds static and dynamic websites for both middle and small scale companies,enterprises and organisations as well as startups.<br>
+      </p>
+      <p>My aim is to provide best and quality solutions through web pages. I do this through HTML,CSS and JavaScript to deliver popping and interactive websites</p>
+      <p>Am passionate about learning full stack web development and perfecting at general programming languages</p>
+      <button id="know">Know More</button>
+    </div>
+    
+    <div class="card skills">
+      <h3>Skills</h3>
+      <p>In web development I have a good knowledge and understanding of a variety of technologies which are used i.the field which are: HTML,CSS,BootStrap v3 and v4,JavaScript and React</p><br>
+      <div class="progress">
+        <p>HTML: </p><div class="bar html-bar"><div id="pdone"></div><div id="prem"></div></div>
+      </div>
+      <div class="progress">
+        <p>CSS: </p><div class="bar css-bar"><div id="pdone"></div><div id="prem"></div></div>
+      </div>
+      <div class="progress">
+        <p>JavaScript: </p><div class="bar js-bar"><div id="pdone"></div><div id="prem"></div></div>
+      </div>
+      <button id="know">Know More</button>
+    </div>
+    
+    <div class="card projects">
+      <h3>Projects</h3>
+      <p style="color: red; font-size:30px;">Am working on something</p>
+    </div>
+    
+    <div class="card contact">
+      <h3>Contact</h3>
+    </div>
+    
+  </div>
+  
+  <footer>
+    <i class="fa-brands fa-square-github"></i>
+    <i class="fa-brands fa-discord"></i>
+    <i class="fa-brands fa-square-facebook"></i>
+    <i class="fa-brands fa-square-instagram"></i>
+    <i class="fa-brands fa-square-whatsapp"></i>
+  </footer>
+  
+  <script src="script.js" type="text/javascript" charset="utf-8"></script>
+  
+</body>
+
+</html>
