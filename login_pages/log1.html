@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
+  <script src="https://kit.fontawesome.com/31326d426c.js" crossorigin="anonymous"></script>
   <style>
     *{
       padding: 0;
@@ -54,6 +55,10 @@
       color: blue;
       font-size: 18px;
     }
+    i{
+      align-self: center;
+      font-size:20px;
+    }
     .plink{
       text-align: center;
     }
@@ -84,15 +89,16 @@
     <p>Welcome back please login to your account</p>
     <div class="inputs">
       <input type="text" name="userName" id="userName" placeholder="User Name" oninput="validUser()">
-      <i>icon</i>
+      <i class="fa-regular fa-user" style="color: #0000ff;"></i>
     </div>
     <p id="warn"></p>
     <div class="inputs">
       <input type="password" name="pswd" id="pswd" placeholder="Password">
-      <i>icon</i>
+      <i id="lock"  class="fa-solid fa-lock" style="color: #0000ff;" onclick="see()"></i><!--otherone is fa-lock-open-->
     </div>
     <div id="rem-holder">
       <input type="checkbox" name="rem" id="rem"><label for="rem">Remember me</label>
+      <!--for this create a cookie-->
     </div>
     <input type="button" value="Login" id="login">
     <p class="plink">Don't have an account? <a href="#">Signup</a></p>
@@ -102,6 +108,8 @@
   <script>
     let user = document.getElementById('userName');
     let warning = document.getElementById('warn');
+    let pswd = document.getElementById('pswd');
+    let lock = document.getElementById('lock');
     function validUser(){
       if(user.value.match(/[0-9]/g)){
         warning.innerHTML = "User name cannot contain numbers";
@@ -109,6 +117,18 @@
         warning.style.fontSize = '12px';
       }else{
         warning.innerHTML = '';
+      }
+    }
+    
+    function see(){
+      if(pswd.type == "password"){
+        pswd.type = "text";
+        lock.classList.remove('fa-lock');
+        lock.classList.add("fa-lock-open");
+      }else{
+        pswd.type = "password";
+        lock.classList.remove("fa-lock-open");
+        lock.classList.add('fa-lock');
       }
     }
   </script>
