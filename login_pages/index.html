@@ -67,13 +67,13 @@
       <label for="email">Email:</label>
       <div class="holder">
         <input type="email" name="" id="email" placeholder="user@gmail.com">
-        <i class="exc">&#10071</i>
+        <i class="exc"></i>
       </div>
       <label for="pswd">Password:</label>
       <div class="holder">
         <input type="password" name="" id="pswd" placeholder="****" />
-        <i class="exc">&#10071</i>
-        <i id="see">&#128274</i>
+        <i class="exc"></i>
+        <i id="see"></i>
       </div>
     </div>
     
@@ -88,28 +88,7 @@
     <button type="submit" id="sub">Sign in</button>
   </div>
   <script>
-    let exc = document.querySelectorAll('.exc');
-    exc[0].style.display = 'none';
-    exc[1].style.display = 'none';
     
-    let email = document.getElementById('email');
-    let pswd = document.getElementById('pswd');
-    let see = document.getElementById('see');
-
-    see.onclick = () => {
-      if(pswd.type = 'password'){
-        pswd.type = 'text';
-      }
-      else{
-        pswd.type = 'password';
-      }
-    }
-   let btn = document.getElementById('sub');
-   btn.onclick = () => {
-     if(email.textContent == 'user'){
-       exc[0].style.display = 'block';
-     }
-   }
   </script>
 </body>
 

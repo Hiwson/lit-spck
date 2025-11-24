@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-image: url("PXL_20251025_111708876.MP.jpg") ;
+      
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .container{
+      border: 2px solid #fff;
+      border-radius: 15px;
+      width: 350px;
+      height:450px;
+      padding:30px;
+      row-gap:20px;
+      display: flex ;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px ;
+      backdrop-filter:blur(18px);
+      color:#fff;
+      font-weight:800;
+    }
+    .inputs{
+      display: flex;
+      width:100%;
+      height:40px;
+      justify-content:space-between;
+      align-content:center;
+      padding: 5px;
+      border:0.5px solid #fff;
+      border-radius: 10px;
+    }
+    .inputs input{
+      outline: none;
+      border: none;
+      background: transparent;
+      width: 75%;
+      font-size: 16px;
+    }
+    .inputs input::placeholder{
+      color: blue;
+      font-size: 18px;
+    }
+    .plink{
+      text-align: center;
+    }
+    #rem-holder{
+      display: flex;
+      align-content: center;
+      gap: 3px;
+    }
+    #login{
+      margin: auto;
+      width: 75%;
+      height: 30px;
+      border-radius: 10px;
+      border:0.5px solid #fff ;
+      background:linear-gradient(120deg, #6871C0,rgba(234, 55, 55, 1));
+      cursor: pointer;
+    }
+    a{
+      color: red;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <p>Welcome back please login to your account</p>
+    <div class="inputs">
+      <input type="text" name="userName" id="userName" placeholder="User Name" oninput="validUser()">
+      <i>icon</i>
+    </div>
+    <p id="warn"></p>
+    <div class="inputs">
+      <input type="password" name="pswd" id="pswd" placeholder="Password">
+      <i>icon</i>
+    </div>
+    <div id="rem-holder">
+      <input type="checkbox" name="rem" id="rem"><label for="rem">Remember me</label>
+    </div>
+    <input type="button" value="Login" id="login">
+    <p class="plink">Don't have an account? <a href="#">Signup</a></p>
+    <p class="plink">Created by <a href="https://github.com/Hiwson">Hiwson</a></p>
+  </div>
+  
+  <script>
+    let user = document.getElementById('userName');
+    let warning = document.getElementById('warn');
+    function validUser(){
+      if(user.value.match(/[0-9]/g)){
+        warning.innerHTML = "User name cannot contain numbers";
+        warning.style.color = 'red';
+        warning.style.fontSize = '12px';
+      }else{
+        warning.innerHTML = '';
+      }
+    }
+  </script>
+</body>
+
+</html>
